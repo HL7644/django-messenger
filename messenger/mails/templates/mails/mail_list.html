@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="row">
+    <div class="col-9">
+        {% for message in messages %}
+            {{message}}
+        {%endfor%}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">From</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Arrived</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mail in mails_list%}
+                <tr>
+                    <td>{{mail.from_user}}</td>
+                    <td><a href='{{mail.get_absolute_url}}'>{{mail.title}}</a></td>
+                    <td>{{mail.time}}</td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        <a type="button" class="btn btn-dark px-3" href='create/'>New Message</a>
+    </div>
+</div>
+{%endblock%}

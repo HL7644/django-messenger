@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="row">
+    <div class="col-10 col-md-8">
+        {% if request.user.is_authenticated %}
+            <h4 class="mb-3">Welcome to Messenger</h4>
+            <p class="mb-3">Click to Access Mails</p>
+            <a type="button" class="btn btn-dark px-3 mx-auto" href="/mails/">Mail</a>
+        {% else %}
+            <h4 class="mb-3">Welcome to Messenger</h4>
+            <p class="mb-3">Log In First to Access Messenger</p>
+            <a type="button" class="btn btn-dark px-3 mx-auto" href="/login/">Log In</a>
+        {%endif%}
+    </div>
+</div>
+{%endblock%}

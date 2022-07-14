@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="row">
+    <div class="col-9 col-md-5">
+        {%for message in messages%}
+        <p class="mb-3">{{message}}</p>
+        {%endfor%}
+        <h4 class="mb-3">Log In page</h4>
+        <form method="POST" action="."> {% csrf_token %}
+            <label for="username" class="form-text mb-2">Username:</label>
+            <input type="text" class="form-control mb-3" name="username"/>
+            <label for="password" class="form-text mb-2">Password:</label>
+            <input type="password" class="form-control mb-3" name="password"/> 
+            <input type="submit" class="btn btn-dark mb-3" value="Log In"/>
+        </form>
+        <p>Not a member? <a href="/register/">Register</a></p>
+    </div>
+</div>
+{%endblock%}

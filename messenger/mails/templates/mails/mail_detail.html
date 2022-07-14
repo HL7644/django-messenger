@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="row">
+    <div class="col-10">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"><h5>Title:</h5></th>
+                    <td><h5>{{mail.title}}</h5></td>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <th>From:</th>
+                    <td>{{mail.from_user}}</td>
+                </tr>
+                <tr>
+                    <th>To:</th>
+                    <td>{{mail.to_user}}</td>
+                </tr>
+                <tr>
+                    <th>Arrived:</th>
+                    <td>{{mail.time}}</td>
+                </tr>
+                <tr>
+                    <th>Content:</th>
+                    <td>{{mail.body}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{%endblock%}
