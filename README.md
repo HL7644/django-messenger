@@ -1,10 +1,10 @@
 # django-messenger
 Messenger website using Django
 
-1. AWS Elastic Beanstalk
+#1 AWS Elastic Beanstalk
 http://messenger-env.eba-pzkghukm.us-west-2.elasticbeanstalk.com/
 
-2. To run in your local server
+#2 To run in your local server
 1) download & put messenger file(entire folder) into your desired directory
 2) In your directory: in your terminal, use: "virtualenv env" to create virtual environment
 3) activate virtual environment using "source env/bin/activate"
